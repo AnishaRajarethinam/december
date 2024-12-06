@@ -1,7 +1,7 @@
 FROM python:3.6
 
 # Create app directory
-WORKDIR /app
+WORKDIR /appdev
 
 # Install app dependencies
 COPY requirements.txt ./
@@ -9,6 +9,6 @@ COPY requirements.txt ./
 RUN pip install -r requirements.txt
 
 # Bundle app source
-COPY server.py /app
+COPY server.py /appdev
 
 CMD [ "python", "server.py" ]
